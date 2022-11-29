@@ -1,11 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { IonRouterOutlet, Platform } from '@ionic/angular';
 import { App } from '@capacitor/app';
+import SwiperCore, { Autoplay, Keyboard, Pagination } from 'swiper';
+
+SwiperCore.use([Autoplay, Pagination, Keyboard]);
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomePage implements OnInit {
 
@@ -20,11 +24,19 @@ export class HomePage implements OnInit {
   }
 
   backButtonEvent() {
-    this.platform.backButton.subscribeWithPriority(-1, () => {
+    this.platform.backButton.subscribeWithPriority(66, () => {
       if (!this.routerOutlets.canGoBack()) {
         App.exitApp();
       }
     });
   }
+
+  // ionViewWillLeave(){
+  //   this.SwiperCore.stopAutoplay();
+  // }
+
+  // ionViewDidEnter() {
+  //   this.SwiperCore.startAutoplay();
+  // }
 
 }
