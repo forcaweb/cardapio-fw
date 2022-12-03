@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { BackButtonExitService } from './services/back-button-exit.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,9 @@ export class AppComponent {
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
-  constructor() {
-
+  constructor(
+    private backButtonService: BackButtonExitService
+  ) {
+    this.backButtonService.init();
   }
 }
