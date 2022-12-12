@@ -8,7 +8,8 @@ import { BackButtonExitService } from './services/back-button-exit.service';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'Home', url: '/', icon: 'home' },
+    { title: 'Contato', url: '/contact', icon: 'call' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
@@ -16,5 +17,9 @@ export class AppComponent {
     private backButtonService: BackButtonExitService
   ) {
     this.backButtonService.init();
+  }
+
+  ngOnInit() {
+
   }
 }

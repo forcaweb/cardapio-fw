@@ -2,13 +2,74 @@
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
 
+.header{
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-color: #f5061d;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  ion-menu-button{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    box-shadow: 0 0 10px #fffefea6;
+    background-color: #ffb300;
+    border-radius: 2px;
+  }
+  .search{
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    input{
+      flex: 90%;
+      position: relative;
+      display: inline-block;
+      padding: 7px;
+      border: none;
+      outline: none;
+    }
+    ion-icon{
+      flex: 10%;
+      position: relative;
+      display: inline-block;
+      color: #f5061d;
+    }
+  }
+}
+
+.container{
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-color: #e3e3e3;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 .swiper {
+  position: relative;
   width: 100%;
   height: 100%;
   min-height: 100px;
 }
 
 .swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -29,8 +90,30 @@
 }
 
 .swiper-slide img {
+  position: relative;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 170px;
   object-fit: cover;
+}
+
+.swiper-pagination-bullet{
+  background-color: #ffff;
+  opacity: 100%;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #f5061d;
+}
+
+@media only screen and (max-width: 920px) {
+  .swiper-slide img{
+    height: 370px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .swiper-slide img{
+    height: 170px;
+  }
 }

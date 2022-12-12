@@ -1,13 +1,12 @@
-<header>
-  <div>LOGO</div>
-  <form action="#">
-    <input type="text" id="getProductCamp">
+<header class="header">
+  <ion-menu-button><ion-icon name="menu-outline"></ion-icon></ion-menu-button>
+  <form action="#" class="search">
+    <input type="text" id="getProductCamp" placeholder="Pesquisar...">
     <ion-icon name="search-outline"></ion-icon>
   </form>
-  <ion-menu-button><ion-icon name="menu-outline"></ion-icon></ion-menu-button>
-<header>
+</header>
 
-<main>
+<main class="container">
   <section>
     <swiper
     [autoplay]="true"
@@ -18,15 +17,15 @@
     }"
     [keyboard]="true"
     >
-    <ng-template swiperSlide>Slide 1</ng-template
-    ><ng-template swiperSlide>Slide 2</ng-template
-    ><ng-template swiperSlide>Slide 3</ng-template
-    ><ng-template swiperSlide>Slide 4</ng-template
-    ><ng-template swiperSlide>Slide 5</ng-template
-    ><ng-template swiperSlide>Slide 6</ng-template
-    ><ng-template swiperSlide>Slide 7</ng-template
-    ><ng-template swiperSlide>Slide 8</ng-template
-    ><ng-template swiperSlide>Slide 9</ng-template>
+    <ng-template swiperSlide>
+      <img src="https://portalidea.com.br/cursos/eec47da52e6194bc65949c4fe73c6b65.webp" alt="Lanche">
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="https://milkmellow.com.br/wp-content/uploads/2021/01/Os-Principais-Lanches-Brasileiros-1.jpg" alt="Lanche">
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="https://cms-cdn.saipos.com/assets/2022/07/04/cardapio-de-lanches_uid_62c33e794869a.jpg" alt="Lanche">
+    </ng-template>
   </swiper>
   </section>
 
@@ -39,7 +38,7 @@
   </section>
 
   <section>
-    Produtos remendados 111
+    Produtos remendados 11122233
   </section>
-  <ion-button RouterLink="/contac">Contact page</ion-button>
+  <a (click)='pageContact()'>Contact page</a><br>
 </main>
