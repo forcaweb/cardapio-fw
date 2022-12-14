@@ -22,6 +22,8 @@
     "@awesome-cordova-plugins/app-version": "^6.2.0",
     "@capacitor/android": "4.6.0",
     "@capacitor/core": "^4.6.0",
+    "@ionic-native/app-minimize": "^5.36.0",
+    "@ionic-native/core": "^5.36.0",
     "@ionic/angular": "^6.1.9",
     "@ionic/cordova-builders": "^7.0.0",
     "cordova-ios": "6.2.0",
@@ -51,6 +53,7 @@
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
     "cordova-android": "^10.1.2",
+    "cordova-plugin-appminimize": "^1.0.1",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-exitapp2": "^1.0.4",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
@@ -81,7 +84,8 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
       "kr.co.joycorp.cordova.exitapp": {},
-      "cordova-plugin-app-exit": {}
+      "cordova-plugin-app-exit": {},
+      "cordova-plugin-appminimize": {}
     },
     "platforms": [
       "ios",

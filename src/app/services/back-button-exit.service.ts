@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { NavController, Platform } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { App } from '@capacitor/app';
+import  { AppMinimize } from '@ionic-native/app-minimize';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,7 @@ export class BackButtonExitService {
       const currentUrl = this.router.url;
 
       if(currentUrl === '/'){
-        App.minimizeApp();
+        AppMinimize.minimize();
       }
       else{
         this.navCtrl.back();
