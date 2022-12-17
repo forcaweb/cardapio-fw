@@ -36,3 +36,12 @@
     font-family: montserrat;
     box-sizing: border-box;
 }
+
+body{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #e3e3e3;
+}
+

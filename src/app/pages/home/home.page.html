@@ -5,40 +5,137 @@
     <ion-icon name="search-outline"></ion-icon>
   </form>
 </header>
-
 <main class="container">
-  <section>
-    <swiper
-    [autoplay]="true"
-    [loop]="true"
-    [spaceBetween]="30"
-    [pagination]="{
-      clickable: true
-    }"
-    [keyboard]="true"
-    >
-    <ng-template swiperSlide>
-      <img src="https://portalidea.com.br/cursos/eec47da52e6194bc65949c4fe73c6b65.webp" alt="Lanche">
-    </ng-template>
-    <ng-template swiperSlide>
-      <img src="https://milkmellow.com.br/wp-content/uploads/2021/01/Os-Principais-Lanches-Brasileiros-1.jpg" alt="Lanche">
-    </ng-template>
-    <ng-template swiperSlide>
-      <img src="https://cms-cdn.saipos.com/assets/2022/07/04/cardapio-de-lanches_uid_62c33e794869a.jpg" alt="Lanche">
-    </ng-template>
-  </swiper>
-  </section>
+  <ion-content>
+    <section class="carrosel">
+      <swiper [autoplay]="true" [loop]="true" [spaceBetween]="30" [pagination]="{
+        clickable: true
+      }" [keyboard]="true">
+        <ng-template swiperSlide>
+          <img src="https://portalidea.com.br/cursos/eec47da52e6194bc65949c4fe73c6b65.webp" alt="Lanche">
+        </ng-template>
+        <ng-template swiperSlide>
+          <img src="https://milkmellow.com.br/wp-content/uploads/2021/01/Os-Principais-Lanches-Brasileiros-1.jpg"
+            alt="Lanche">
+        </ng-template>
+        <ng-template swiperSlide>
+          <img src="https://cms-cdn.saipos.com/assets/2022/07/04/cardapio-de-lanches_uid_62c33e794869a.jpg"
+            alt="Lanche">
+        </ng-template>
+      </swiper>
+    </section>
 
-  <section>
-    postagens recentes
-  </section>
+    <div class="titlle">
+      <h2>Últimas produtos postados</h2>
+    </div>
 
-  <section>
-    promoções do dia
-  </section>
+    <section class="postCards">
+      <div class="cardConatiner">
+        <div class="cardImg">
+          <img src="https://cms-cdn.saipos.com/assets/2022/07/04/cardapio-de-lanches_uid_62c33e794869a.jpg"
+            alt="Lanche">
+        </div>
+        <div class="cardTitlle">
+          <h2>Amburgue Teste</h2>
+        </div>
+        <div class="cardContent">
+          <p>Amburguer deliciosos, feito especialmente para você e sua familia.</p>
+        </div>
+        <div class="cardGoIt">
+          <a href="/">Ir ao produto</a>
+        </div>
+      </div>
 
-  <section>
-    Produtos remendados 11122233
-  </section>
-  <a (click)='pageContact()'>Contact page</a><br>
+      <div class="cardConatiner">
+        <div class="cardImg">
+          <img src="https://cms-cdn.saipos.com/assets/2022/07/04/cardapio-de-lanches_uid_62c33e794869a.jpg"
+            alt="Lanche">
+        </div>
+        <div class="cardTitlle">
+          <h2>Amburgue Teste</h2>
+        </div>
+        <div class="cardContent">
+          <p>Amburguer deliciosos, feito especialmente para você e sua familia.</p>
+        </div>
+        <div class="cardGoIt">
+          <a href="/">Ir ao produto</a>
+        </div>
+      </div>
+
+      <div class="cardConatiner">
+        <div class="cardImg">
+          <img src="https://cms-cdn.saipos.com/assets/2022/07/04/cardapio-de-lanches_uid_62c33e794869a.jpg"
+            alt="Lanche">
+        </div>
+        <div class="cardTitlle">
+          <h2>Amburgue Teste</h2>
+        </div>
+        <div class="cardContent">
+          <p>Amburguer deliciosos, feito especialmente para você e sua familia.</p>
+        </div>
+        <div class="cardGoIt">
+          <a href="/">Ir ao produto</a>
+        </div>
+      </div>
+
+      <div class="cardConatiner">
+        <div class="cardImg">
+          <img src="https://cms-cdn.saipos.com/assets/2022/07/04/cardapio-de-lanches_uid_62c33e794869a.jpg"
+            alt="Lanche">
+        </div>
+        <div class="cardTitlle">
+          <h2>Amburgue Teste</h2>
+        </div>
+        <div class="cardContent">
+          <p>Amburguer deliciosos, feito especialmente para você e sua familia.</p>
+        </div>
+        <div class="cardGoIt">
+          <a href="/">Ir ao produto</a>
+        </div>
+      </div>
+
+
+      <div class="cardConatiner">
+        <div class="cardImg">
+          <img src="https://cms-cdn.saipos.com/assets/2022/07/04/cardapio-de-lanches_uid_62c33e794869a.jpg"
+            alt="Lanche">
+        </div>
+        <div class="cardTitlle">
+          <h2>Amburgue Teste</h2>
+        </div>
+        <div class="cardContent">
+          <p>Amburguer deliciosos, feito especialmente para você e sua familia.</p>
+        </div>
+        <div class="cardGoIt">
+          <a href="/">Ir ao produto</a>
+        </div>
+      </div>
+
+
+      <div class="cardConatiner">
+        <div class="cardImg">
+          <img src="https://cms-cdn.saipos.com/assets/2022/07/04/cardapio-de-lanches_uid_62c33e794869a.jpg"
+            alt="Lanche">
+        </div>
+        <div class="cardTitlle">
+          <h2>Amburgue Teste</h2>
+        </div>
+        <div class="cardContent">
+          <p>Amburguer deliciosos, feito especialmente para você e sua familia.</p>
+        </div>
+        <div class="cardGoIt">
+          <a href="/">Ir ao produto</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="postCards">
+      promoções do dia
+    </section>
+
+    <section class="postCards">
+      Produtos remendados
+    </section>
+  </ion-content>
 </main>

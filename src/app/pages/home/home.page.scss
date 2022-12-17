@@ -2,7 +2,7 @@
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
 
-.header{
+.header {
   position: relative;
   display: flex;
   width: 100%;
@@ -13,15 +13,18 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  ion-menu-button{
-    padding: 0;
+
+  ion-menu-button {
+    padding: 5px 0;
     margin: 0;
     color: #fff;
     box-shadow: 0 0 10px #fffefea6;
     background-color: #ffb300;
     border-radius: 2px;
+    height: auto;
   }
-  .search{
+
+  .search {
     position: relative;
     display: flex;
     width: 100%;
@@ -32,7 +35,9 @@
     flex-wrap: nowrap;
     background-color: #fff;
     border: 1px solid #e3e3e3;
-    input{
+    border-radius: 4px;
+
+    input {
       flex: 90%;
       position: relative;
       display: inline-block;
@@ -40,7 +45,8 @@
       border: none;
       outline: none;
     }
-    ion-icon{
+
+    ion-icon {
       flex: 10%;
       position: relative;
       display: inline-block;
@@ -48,15 +54,20 @@
     }
   }
 }
-
-.container{
+ion-content{
+  padding: 0px;
+  margin: 0px;
+}
+.container {
   position: relative;
   display: flex;
   width: 100%;
-  padding: 10px;
   background-color: #e3e3e3;
   flex-direction: column;
   flex-wrap: nowrap;
+  gap: 10px;
+  min-height: 100vh;
+  overflow: auto;
 }
 
 .swiper {
@@ -97,23 +108,131 @@
   object-fit: cover;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background-color: #ffff;
   opacity: 100%;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background-color: #f5061d;
 }
 
-@media only screen and (max-width: 920px) {
-  .swiper-slide img{
+.titlle{
+  font-size: 12px;
+  color: #343434;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.postCards {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 160px 160px;
+  gap: 7px;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  .cardConatiner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background: #fff;
+    flex-direction: column;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    gap: 5px;
+    box-shadow: 0 0 10px rgba(6, 6, 6, 0.286);
+    .cardImg {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        position: relative;
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .cardTitlle {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: 10px;
+      padding: 5px 10px;
+    }
+
+    .cardContent {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+      padding: 5px 10px;
+    }
+
+    .cardGoIt {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      a {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        padding: 5px 10px;
+        background: #006023;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .swiper-slide img {
     height: 370px;
+  }
+  .postCards {
+    grid-template-columns: 200px 200px 200px 200px;
+  }
+}
+
+
+@media only screen and (min-width: 540px) {
+  .swiper-slide img {
+    height: 370px;
+  }
+  .postCards {
+    grid-template-columns: 200px 200px 200px;
   }
 }
 
 @media only screen and (max-width: 460px) {
-  .swiper-slide img{
+  .swiper-slide img {
     height: 170px;
+  }
+
+  .postCards {
+    grid-template-columns: 160px 160px;
   }
 }
